@@ -1,0 +1,48 @@
+{
+  "name": "ezhash",
+  "version": "1.0.0",
+  "description": "Easy, configurable & secure hashing library for Javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hey24sheep/ezhash.git"
+  },
+  "scripts": {
+    "setup": "npm install && npm run setup-test",
+    "setup-test": "cd ./test && npm install && cd..",
+    "build": "rollup -c",
+    "rebuild": "npm run clean && npm run build",
+    "eslint": "eslint ./",
+    "clean": "cleandir .//dist",
+    "serve": "serve ./test",
+    "test": "npm run rebuild && npm run setup-test && npm run serve"
+  },
+  "keywords": [
+    "hashing",
+    "scrypt",
+    "argon2",
+    "javascript",
+    "js",
+    "browser",
+    "hash",
+    "password",
+    "hashing",
+    "hash-functions"
+  ],
+  "author": "Heyramb Narayan Goyal (https://hey24sheep.com)",
+  "license": "MIT",
+  "dependencies": {
+    "argon2-browser": "^1.18.0",
+    "scrypt-js": "^3.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-wasm": "^5.1.2",
+    "clean-dir": "^1.0.3",
+    "eslint": "^8.0.1",
+    "rollup": "^2.58.0",
+    "rollup-plugin-polyfill-node": "^0.7.0",
+    "rollup-plugin-rename": "^1.0.1",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

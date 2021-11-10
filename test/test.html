@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - EzHash</title>
+    <!-- <script src="./node_modules/ez-hash/dist/779899593945a295.wasm"></script> -->
+    <script src="./node_modules/ez-hash/dist/ezhash.umd.js"></script>
+    <script>
+        // import ezhash from "ezhash";
+        (async () => {
+            console.log(ezhash);
+            const s = await ezhash.argonHash('password', 'somesalt');
+            console.log('Result ', s);
+            const v = await ezhash.argonVerify('password', 'enc-hash');
+            console.log('Verify ', v);
+        })();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
